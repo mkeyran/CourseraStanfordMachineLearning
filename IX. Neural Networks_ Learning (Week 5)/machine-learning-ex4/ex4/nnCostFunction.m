@@ -79,7 +79,12 @@ yn = eye(num_labels)(y,:);
 %s = s/m;
 %disp(s);
 
-J = sum((-yn.*log(t) - (1-yn).*log(1-t))(:)/m);
+%regcost = lambda / 2 / m * (trace(Theta1(:,2:end)^2) + trace(Theta2(:,2:end)^2)); 
+
+regcost = lambda / 2 / m * (sum((Theta1(:,2:end).^2)(:)) ...
+                          + sum((Theta2(:,2:end).^2)(:))); 
+
+J = sum((-yn.*log(t) - (1-yn).*log(1-t))(:)/m) + regcost;
 
 
 
