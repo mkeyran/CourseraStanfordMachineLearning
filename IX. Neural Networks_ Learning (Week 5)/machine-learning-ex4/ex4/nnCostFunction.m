@@ -94,8 +94,8 @@ for k = 1:m
   delta3 = delta3 + (s3'*a2(k,:));
   delta2 = delta2 + (s2'*a1(k,:));
 endfor
-Theta1_grad = delta2/m;
-Theta2_grad = delta3/m;
+Theta1_grad = delta2/m + lambda/m .* [zeros(hidden_layer_size,1) Theta1(:,2:end)];
+Theta2_grad = delta3/m + lambda/m .* [zeros(num_labels,1) Theta2(:,2:end)];
 
 % =========================================================================
 
