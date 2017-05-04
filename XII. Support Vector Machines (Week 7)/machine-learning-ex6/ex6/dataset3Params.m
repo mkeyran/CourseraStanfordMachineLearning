@@ -23,11 +23,10 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
+%[C, sigma] = bestParams(X, y, Xval, yval)
 
-
-
-
-
+C = 0.37037;
+sigma = 0.11111;
 
 % =========================================================================
 
