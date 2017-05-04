@@ -1,0 +1,7 @@
+*.pdf
+*.mp4
+*.srt
+.dthumb
+*.zip
+token.mat
+octave-workspace
