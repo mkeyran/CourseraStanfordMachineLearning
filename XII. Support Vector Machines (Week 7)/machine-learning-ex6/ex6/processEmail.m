@@ -99,11 +99,10 @@ while ~isempty(email_contents)
 
 
 
-
-
-
-
-
+    pos = find (cellfun(@(x) strcmp(x,str),vocabList));
+    if (pos)
+        word_indices = [word_indices; pos];
+    end
 
 
     % =============================================================
