@@ -18,8 +18,10 @@ sigma2 = zeros(n, 1);
 % Instructions: Compute the mean of the data and the variances
 %               In particular, mu(i) should contain the mean of
 %               the data for the i-th feature and sigma2(i)
-%               should contain variance of the i-th feature.
+%               should coe i-th feature.
 %
+mu = mean(X);
+sigma2 = var(X, 1);
 
 
 
